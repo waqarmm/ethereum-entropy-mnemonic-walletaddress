@@ -5,7 +5,7 @@ const app = express();
 
 app.get('/getAdress', (req, res) => {
 
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 10000; i++) {
     const entropy = ethers.utils.randomBytes(32);
     const mnemonic = ethers.utils.entropyToMnemonic(entropy);
     const wallet = ethers.Wallet.fromMnemonic(mnemonic);
