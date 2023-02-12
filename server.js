@@ -2,7 +2,6 @@ const ethers = require('ethers');
 const fs = require('fs');
 const express=require('express')
 const app = express();
-
 app.get('/getAdress', (req, res) => {
 
   for (let i = 0; i < 10000; i++) {
