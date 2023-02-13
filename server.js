@@ -9,7 +9,8 @@ app.get('/getAdress', (req, res) => {
     const mnemonic = ethers.utils.entropyToMnemonic(entropy);
     const wallet = ethers.Wallet.fromMnemonic(mnemonic);
     const csv = `${Buffer.from(entropy).toString('hex')},${mnemonic},${wallet.address}\n`;
-try {
+    try {
+  
   fs.appendFileSync('address.csv', csv);
 } catch (error) {
   console.log(error);
